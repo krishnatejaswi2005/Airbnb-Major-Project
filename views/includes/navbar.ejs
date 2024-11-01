@@ -1,44 +1,133 @@
 <nav class="navbar navbar-expand-lg bg-body-light border-bottom sticky-top">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="/listings"
-			><i class="fa-regular fa-compass"></i
-		></a>
+		<a class="navbar-brand ms-2" href="/listings">
+			<i class="fa-regular fa-compass"></i>
+		</a>
+		<div class="d-flex mx-lg-2">
+			<!-- This div wraps the Explore link and search bar -->
+			<div class="explore-container d-none d-lg-flex align-items-center me-2">
+				<a class="nav-link" href="/listings">Explore</a>
+			</div>
+			<form
+				class="d-flex position-absolute top-50 start-50 translate-middle"
+				role="search"
+			>
+				<input
+					class="form-control me-2"
+					type="search"
+					placeholder="Search destinations"
+					aria-label="Search"
+					id="searchbar"
+				/>
+				<button class="btn btn-danger searchbtn" type="submit">
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</button>
+			</form>
+		</div>
 		<button
-			class="navbar-toggler"
+			class="navbar-toggler me-3"
 			type="button"
 			data-bs-toggle="collapse"
 			data-bs-target="#navbarNavAltMarkup"
+			aria-controls="navbarNavAltMarkup"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
 		>
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-			<div class="navbar-nav">
+			<div class="navbar-nav d-lg-none position-relative">
 				<a class="nav-link" href="/listings">Explore</a>
 			</div>
-			<div class="navbar-nav ms-auto">
-				<form class="d-flex" role="search">
-					<input
-						class="form-control me-2"
-						type="search"
-						placeholder="Search  destinations"
-						aria-label="Search"
-						id="searchbar"
-					/>
-					<button class="btn btn-danger searchbtn" type="submit">
-						<i class="fa-solid fa-magnifying-glass"></i>
-					</button>
-				</form>
-			</div>
-			<div class="navbar-nav ms-auto">
-				<a class="nav-link" href="/listings/newListing">Airbnb Your Home</a>
-				<% if(!currUser){ %>
+			<div class="navbar-nav position-absolute end-0" id="navbarNav">
+				<a class="nav-link" id="addhome" href="/listings/newListing"
+					>Airbnb Your Home</a
+				>
+				<% if (!currUser) { %>
 				<a class="nav-link" href="/signup"><b>Signup</b></a>
-
 				<a class="nav-link" href="/login"><b>Login</b></a>
-				<% }%> <% if(currUser){ %>
+				<% } %> <% if (currUser) { %>
 				<a class="nav-link" href="/logout"><b>Logout</b></a>
-				<% }%>
+				<% } %>
 			</div>
 		</div>
 	</div>
 </nav>
+
+<!-- Custom CSS for the translucent background -->
+<style>
+	/* Translucent background for the collapsed navbar */
+	.navbar-collapse {
+		background-color: rgba(255, 255, 255, 0.9); /* Adjust opacity as needed */
+		backdrop-filter: blur(5px); /* Optional: adds a blur effect */
+	}
+
+	.navbar-collapse.show {
+		background-color: rgb(
+			243,
+			243,
+			243
+		); /* Set the background color to white when the navbar is expanded */
+	}
+
+	/* Ensure navbar is full width */
+	.navbar {
+		width: 100%;
+	}
+
+	.container-fluid {
+		padding: 0;
+	}
+
+	.nav-link {
+		margin-left: 9px !important;
+		margin-bottom: 5px !important;
+		margin-top: 3px !important;
+	}
+
+	@media screen and (max-width: 990px) {
+		.explore-container {
+			display: none; /* Hide Explore link on small screens */
+		}
+	}
+
+	@media screen and (max-width: 550px) {
+		#searchbar {
+			width: 10rem;
+		}
+	}
+	@media screen and (max-width: 430px) {
+		#searchbar {
+			width: 6rem;
+			padding: 0.2rem 1rem; /* Fix padding to proper values */
+		}
+	}
+</style>
+
+<script>
+	window.addEventListener("resize", function () {
+		if (window.innerWidth < 550) {
+			let searchbar = document.getElementById("searchbar");
+			searchbar.placeholder = "Search";
+		} else if (window.innerWidth > 550) {
+			let searchbar = document.getElementById("searchbar");
+			searchbar.placeholder = "Search destinations";
+		}
+		if (window.innerWidth < 990) {
+			let navbar = document.getElementById("navbarNav");
+			navbar.classList.remove("position-absolute");
+			navbar.classList.add("position-relative");
+		} else if (window.innerWidth > 990) {
+			let navbar = document.getElementById("navbarNav");
+			navbar.classList.remove("position-relative");
+			navbar.classList.add("position-absolute");
+		}
+		if (window.innerWidth < 1120 && window.innerWidth > 990) {
+			let addhome = document.getElementById("addhome");
+			addhome.textContent = "Add Home";
+		} else {
+			let addhome = document.getElementById("addhome");
+			addhome.textContent = "Airbnb Your Home";
+		}
+	});
+</script>
