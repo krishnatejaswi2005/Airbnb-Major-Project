@@ -1,0 +1,180 @@
+.navbar {
+	height: 4rem;
+	background-color: white;
+	font-family: "Plus Jakarta Sans", sans-serif;
+}
+.fa-compass {
+	color: #fe424d;
+	font-size: 2rem;
+}
+.nav-link {
+	color: #222222 !important;
+}
+
+.f-info-links a {
+	text-decoration: none;
+	color: #222222;
+	margin-left: 7px;
+}
+.f-info-links a:hover {
+	text-decoration: underline;
+}
+.f-info {
+	display: flex;
+	height: 8rem;
+	background-color: #ebebeb;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: space-evenly;
+	text-align: center;
+}
+
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+html,
+body {
+	height: 100%;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+footer {
+	background-color: #f1f1f1; /* Adjust as needed */
+	padding: 1rem; /* Adjust as needed */
+	text-align: center;
+	width: 100%;
+	margin-top: auto; /* Pushes the footer to the bottom if content above is not enough */
+}
+
+.f-info-socials i {
+	font-size: 1.2rem;
+	margin-right: 0.5rem;
+	margin-left: 1rem;
+}
+.listing-body {
+	font-family: "Plus Jakarta Sans", sans-serif;
+	margin-left: 0.5rem;
+}
+.listingcard {
+	margin-bottom: 2rem;
+	border: none !important;
+	width: 100%; /* Make the card take full width of its column */
+	font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.card-body {
+	padding: 5px 0 0 4px !important;
+	font-size: 0.75rem;
+	width: 100%; /* Remove any fixed width */
+}
+.row a {
+	text-decoration: none;
+}
+
+.card-img-top {
+	width: 100% !important; /* Make the image take the full card width */
+	height: 14rem !important;
+	object-fit: cover;
+	border-radius: 1rem !important;
+}
+
+.row {
+	margin-left: 0; /* Ensure there is no unintended spacing */
+	margin-right: 0;
+}
+
+.card-title {
+	font-size: 0.8rem;
+	font-weight: 600;
+	margin-bottom: 2px !important;
+}
+.card-img-overlay {
+	opacity: 0;
+}
+.card-img-overlay:hover {
+	opacity: 0.15;
+	background-color: #ffffff;
+}
+.btn {
+	background-color: #fe424d;
+	/* border: #222222 solid 1px !important; */
+	box-shadow: #7c7c7c 2px 2px 2px !important;
+}
+.editbt:hover {
+	background-color: #ff606b !important;
+}
+.buttons {
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-evenly;
+}
+.btn-primary {
+	background-color: #fe424d !important;
+}
+
+.stars {
+	max-height: 2px !important;
+	width: auto !important;
+}
+
+#map {
+	height: 400px;
+	width: 100%;
+	border-radius: 1rem;
+}
+
+.filter_font {
+	font-size: 0.7rem;
+}
+.filter {
+	opacity: 0.8;
+}
+.filter:hover {
+	opacity: 1;
+}
+
+.taxfont {
+	display: none;
+}
+
+.taxSwitch {
+	font-size: 0.85rem;
+	border: rgb(180, 180, 180) 2.5px solid;
+	border-radius: 1rem;
+	padding: 0.6rem 0.5rem;
+	margin-top: -0.3rem;
+	margin-right: 7rem;
+}
+
+#flexSwitchCheckChecked {
+	margin-right: -1.5rem !important;
+}
+
+.searchbtn {
+	background-color: #fe424d !important;
+	box-shadow: #7c7c7c 2px 2px 2px !important;
+	border-radius: 100rem !important;
+}
+
+.searchbtn:active {
+	background-color: #ef888f !important;
+}
+
+#searchbar {
+	width: 15.5rem;
+	border-radius: 2rem;
+	border: rgb(120, 120, 120) 2px solid;
+	padding: 0.2rem 2rem 0.2rem 2rem;
+}
+
+#searchbar:focus {
+	box-shadow: 0 0 5px 2px #ff9aa1 !important;
+	border: #ff606b 2px solid;
+}

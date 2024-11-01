@@ -1,0 +1,105 @@
+<% layout("layouts/boilerplate.ejs") %>
+<body>
+	<div class="container">
+		<div class="filters d-flex mt-3">
+			<div class="filter text-center me-4">
+				<i class="fa-solid fa-fire"></i>
+				<p class="filter_font">Trending</p>
+			</div>
+			<div class="filter text-center me-4">
+				<i class="fa-solid fa-person-swimming"></i>
+				<p class="filter_font">Amazing Pools</p>
+			</div>
+			<div class="filter text-center me-4">
+				<i class="fa-solid fa-building"></i>
+				<p class="filter_font">Apartments</p>
+			</div>
+			<div class="filter text-center me-4">
+				<i class="fa-solid fa-bed"></i>
+				<p class="filter_font">Rooms</p>
+			</div>
+			<div class="filter text-center me-4">
+				<i class="fa-solid fa-mountain"></i>
+				<p class="filter_font">Hill Station</p>
+			</div>
+			<div class="filter text-center me-4">
+				<i class="fa-solid fa-umbrella-beach"></i>
+				<p class="filter_font">Beachfront</p>
+			</div>
+			<div class="filter text-center me-4">
+				<i class="fa-solid fa-house"></i>
+				<p class="filter_font">Cabins</p>
+			</div>
+			<div class="filter text-center me-4">
+				<i class="fa-solid fa-tree"></i>
+				<p class="filter_font">National Parks</p>
+			</div>
+			<div class="filter text-center me-4">
+				<i class="fa-regular fa-snowflake"></i>
+				<p class="filter_font">Arctic</p>
+			</div>
+			<div class="filter text-center me-4">
+				<i class="fa-solid fa-monument"></i>
+				<p class="filter_font">Top Cities</p>
+			</div>
+
+			<div
+				class="form-check form-switch taxSwitch form-check-reverse position-absolute end-0"
+			>
+				<input
+					class="form-check-input"
+					type="checkbox"
+					role="switch"
+					id="flexSwitchCheckChecked"
+				/>
+				<label class="form-check-label ms-2 me-2" for="flexSwitchCheckChecked"
+					>Display total before taxes</label
+				>
+			</div>
+		</div>
+		<div class="row">
+			<% for (let listing of listings) { %>
+			<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+				<a href="/listings/<%= listing._id %>">
+					<div class="card listingcard h-100">
+						<!-- h-100 ensures the card height remains consistent -->
+						<img
+							src="<%= listing.image.url %>"
+							class="card-img-top"
+							alt="image"
+						/>
+						<div class="card-img-overlay"></div>
+						<div class="card-body">
+							<h5 class="card-title"><%= listing.title %></h5>
+							<p class="card-text">
+								&#8377;<%= listing.price.toLocaleString("en-IN") %>/night
+								<span class="taxfont">&nbsp; +<i>18% GST</i></span
+								><br />
+								<%= listing.location %> <br />
+								<%= listing.country %> <br />
+							</p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<% } %>
+		</div>
+	</div>
+</body>
+
+<script>
+	let taxSwitch = document.getElementById("flexSwitchCheckChecked");
+
+	taxSwitch.addEventListener("click", () => {
+		let taxFont = document.getElementsByClassName("taxfont");
+		if (taxSwitch.checked) {
+			for (font of taxFont) {
+				font.style.display = "inline";
+			}
+		} else {
+			for (font of taxFont) {
+				font.style.display = "none";
+			}
+		}
+	});
+</script>
