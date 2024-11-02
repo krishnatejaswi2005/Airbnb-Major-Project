@@ -39,7 +39,7 @@ To set up a local copy of this project for development and testing, follow these
 
 3. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/wanderlust.git](https://github.com/krishnatejaswi2005/Airbnb-Major-Project.git
+   https://github.com/krishnatejaswi2005/Airbnb-Major-Project.git
    ```
 
 4. **Navigate to the project directory**:
