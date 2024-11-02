@@ -22,11 +22,11 @@ Wanderlust is a web application that replicates the functionality of Airbnb, ena
 - **Error Handling**: Comprehensive error handling with WrapAsync and express-error for runtime exceptions.
 
 ## Technologies Used
-- **Frontend**: HTML, CSS, Bootstrap, EJS
+- **Frontend**: CSS, Bootstrap, EJS
 - **Backend**: Node.js, Express.js
-- **Database**: MongoDB, Mongoose
+- **Database**: MongoDB, Mongoose, Mongo Atlas
 - **APIs**: Cloudinary for image storage, Mapbox for mapping and geocoding
-- **Authentication**: Passport.js for secure password handling
+- **Authentication**: Passport npm for secure password handling
 - **Deployment**: Render.com for hosting the application
 - **Version Control**: Git
 
