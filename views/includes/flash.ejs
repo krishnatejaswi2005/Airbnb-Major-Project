@@ -1,40 +1,42 @@
-<%if(success && success.length > 0){%>
-<div
-	class="alert alert-success mt-2 text-center alert-dismissible fade show col-6 offset-3 p-2"
-	role="alert"
->
-	<h6><%= success %></h6>
-	<button
-		type="button"
-		class="btn-close p-1 mt-2 me-2"
-		data-bs-dismiss="alert"
-		aria-label="Close"
-	></button>
+<div class="container">
+	<% if (success && success.length > 0) { %>
+	<div
+		class="alert alert-success mt-2 text-center alert-dismissible fade show col-md-8 col-lg-6 mx-auto p-2"
+		role="alert"
+	>
+		<h6><%= success %></h6>
+		<button
+			type="button"
+			class="btn-close p-1 mt-2 me-2"
+			data-bs-dismiss="alert"
+			aria-label="Close"
+		></button>
+	</div>
+	<% } %> <% if (failure && failure.length > 0) { %>
+	<div
+		class="alert alert-danger mt-2 text-center alert-dismissible fade show col-md-8 col-lg-6 mx-auto p-2"
+		role="alert"
+	>
+		<h6><%= failure %></h6>
+		<button
+			type="button"
+			class="btn-close p-1 mt-2 me-2"
+			data-bs-dismiss="alert"
+			aria-label="Close"
+		></button>
+	</div>
+	<% } %> <% if (error && error.length > 0) { %>
+	<div
+		class="alert alert-danger mt-2 text-center alert-dismissible fade show col-md-8 col-lg-6 mx-auto p-2"
+		role="alert"
+	>
+		<h6><%= error %></h6>
+		<button
+			type="button"
+			class="btn-close p-1 mt-2 me-2"
+			data-bs-dismiss="alert"
+			aria-label="Close"
+		></button>
+	</div>
+	<% } %>
 </div>
-<%}%> <%if(failure && failure.length > 0){%>
-<div
-	class="alert alert-danger mt-2 text-center alert-dismissible fade show col-6 offset-3 p-2"
-	role="alert"
->
-	<h6><%= failure %></h6>
-	<button
-		type="button"
-		class="btn-close p-1 mt-2 me-2"
-		data-bs-dismiss="alert"
-		aria-label="Close"
-	></button>
-</div>
-<%}%> <%if(error && error.length > 0){%>
-<div
-	class="alert alert-danger mt-2 text-center alert-dismissible fade show col-6 offset-3 p-2"
-	role="alert"
->
-	<h6><%= error %></h6>
-	<button
-		type="button"
-		class="btn-close p-1 mt-2 me-2"
-		data-bs-dismiss="alert"
-		aria-label="Close"
-	></button>
-</div>
-<%}%>

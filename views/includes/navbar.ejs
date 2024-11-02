@@ -105,6 +105,31 @@
 </style>
 
 <script>
+	window.addEventListener("DOMContentLoaded", function () {
+		if (window.innerWidth < 550) {
+			let searchbar = document.getElementById("searchbar");
+			searchbar.placeholder = "Search";
+		} else if (window.innerWidth > 550) {
+			let searchbar = document.getElementById("searchbar");
+			searchbar.placeholder = "Search destinations";
+		}
+		if (window.innerWidth < 990) {
+			let navbar = document.getElementById("navbarNav");
+			navbar.classList.remove("position-absolute");
+			navbar.classList.add("position-relative");
+		} else if (window.innerWidth > 990) {
+			let navbar = document.getElementById("navbarNav");
+			navbar.classList.remove("position-relative");
+			navbar.classList.add("position-absolute");
+		}
+		if (window.innerWidth < 1120 && window.innerWidth > 990) {
+			let addhome = document.getElementById("addhome");
+			addhome.textContent = "Add Home";
+		} else {
+			let addhome = document.getElementById("addhome");
+			addhome.textContent = "Airbnb Your Home";
+		}
+	});
 	window.addEventListener("resize", function () {
 		if (window.innerWidth < 550) {
 			let searchbar = document.getElementById("searchbar");
