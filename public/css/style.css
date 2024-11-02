@@ -220,3 +220,11 @@ footer {
 		display: none !important; /* Force hide on smaller screens */
 	}
 }
+
+input:focus,
+textarea:focus,
+select:focus {
+	box-shadow: 0 0 5px 2px #ff9aa1 !important;
+	border: #ff717a 2px solid !important;
+	outline: none;
+}
