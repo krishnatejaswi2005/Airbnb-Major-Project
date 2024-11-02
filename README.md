@@ -6,7 +6,6 @@ Wanderlust is a web application that replicates the functionality of Airbnb, ena
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
-- [Cloning the Project](#cloning-the-project)
 - [Usage](#usage)
 - [Deployment](#deployment)
 - [Contributing](#contributing)
@@ -34,22 +33,26 @@ Wanderlust is a web application that replicates the functionality of Airbnb, ena
 ## Getting Started
 To set up a local copy of this project for development and testing, follow these steps:
 
-1. **Clone the repository**:
+1. **Ensure you have Git installed** on your machine. If not, download it from [git-scm.com](https://git-scm.com/).
+
+2. **Open your terminal or command prompt**.
+
+3. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/wanderlust.git
+   git clone https://github.com/yourusername/wanderlust.git](https://github.com/krishnatejaswi2005/Airbnb-Major-Project.git
    ```
 
-2. **Navigate to the project directory**:
+4. **Navigate to the project directory**:
    ```bash
-   cd wanderlust
+   cd Airbnb-Major-Project
    ```
 
-3. **Install the dependencies**:
+5. **Install the dependencies**:
    ```bash
    npm install
    ```
 
-4. **Set up environment variables**:
+6. **Set up environment variables**:
    Create a `.env` file in the root directory and add the following:
    ```env
    DATABASE_URL=your_mongo_db_connection_string
@@ -58,40 +61,12 @@ To set up a local copy of this project for development and testing, follow these
    SESSION_SECRET=your_session_secret
    ```
 
-5. **Run the application**:
+7. **Run the application**:
    Use `nodemon` to run the application:
    ```bash
    nodemon index.js
    ```
 
-## Cloning the Project
-To clone the project, follow these steps:
-
-1. **Ensure you have Git installed** on your machine. If not, download it from [git-scm.com](https://git-scm.com/).
-
-2. **Open your terminal or command prompt**.
-
-3. **Clone the repository** by running the following command:
-   ```bash
-   git clone https://github.com/krishnatejaswi2005/Airbnb-Major-Project.git
-   ```
-
-4. **Navigate to the project directory**:
-   ```bash
-   cd Airbnb-Major-Project
-   ```
-
-5. **Install the necessary dependencies**:
-   ```bash
-   npm install
-   ```
-
-6. **Create a `.env` file** and configure your environment variables as mentioned in the 'Getting Started' section.
-
-7. **Run the application locally**:
-   ```bash
-   nodemon index.js
-   ```
 
 ## Usage
 - Visit `http://localhost:3000` in your browser to access the application.
