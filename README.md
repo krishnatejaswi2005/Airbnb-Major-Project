@@ -120,7 +120,7 @@ This section provides an overview of how the Wanderlust web application function
 
 ## Deployment
 Stayio is deployed on Render.com. You can view the live application at the following URL:
-[Stayio Live Demo](https://airbnb-major-project-vru8.onrender.com)
+[Stayio Live Demo](https://stayio-travel-and-stay.onrender.com)
 
 ## Contributing
 Contributions are welcome! If you have suggestions for improvements, feel free to open an issue or submit a pull request.
