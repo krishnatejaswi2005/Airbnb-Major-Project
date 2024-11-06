@@ -1,6 +1,6 @@
-# Wanderlust - Airbnb Clone
+# Stayio - Airbnb Clone
 
-Wanderlust is a web application that replicates the functionality of Airbnb, enabling users to browse, create, and manage property listings. Built with modern web technologies, this project emphasizes a user-friendly interface and robust backend features.
+Stayio is a web application that replicates the functionality of Airbnb, enabling users to browse, create, and manage property listings. Built with modern web technologies, this project emphasizes a user-friendly interface and robust backend features.
 
 ## Table of Contents
 - [Features](#features)
@@ -39,12 +39,12 @@ To set up a local copy of this project for development and testing, follow these
 
 3. **Clone the repository**:
    ```bash
-   https://github.com/krishnatejaswi2005/Airbnb-Major-Project.git
+   https://github.com/krishnatejaswi2005/stayiotravelandstayt.git
    ```
 
 4. **Navigate to the project directory**:
    ```bash
-   cd Airbnb-Major-Project
+   cd stayiotravelandstay
    ```
 
 5. **Install the dependencies**:
@@ -119,8 +119,8 @@ This section provides an overview of how the Wanderlust web application function
 - **Deployment**: The application is hosted on Render.com, making it accessible from any device. Responsive design ensures the application is accessible and functional on both mobile and desktop devices.
 
 ## Deployment
-Wanderlust is deployed on Render.com. You can view the live application at the following URL:
-[Wanderlust Live Demo](https://airbnb-major-project-vru8.onrender.com)
+Stayio is deployed on Render.com. You can view the live application at the following URL:
+[Stayio Live Demo](https://stayio-travel-and-stay.onrender.com)
 
 ## Contributing
 Contributions are welcome! If you have suggestions for improvements, feel free to open an issue or submit a pull request.
